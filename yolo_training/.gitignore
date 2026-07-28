@@ -1,0 +1,30 @@
+# 模型权重 (太大, 不进 git)
+*.pt
+*.onnx
+*.cvimodel
+*.axmodel
+*.mud
+*.mlir
+*.npz
+
+# 训练输出
+runs/
+output/
+
+# 数据集
+dataset/
+dataset_raw/
+dataset_yolo/
+dataset_balanced/
+钢球数据集/
+!dataset/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统文件
+.DS_Store
+Thumbs.db

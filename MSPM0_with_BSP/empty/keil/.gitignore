@@ -1,0 +1,52 @@
+# dot files
+/.vscode/
+/.vscode/launch.json
+/.settings
+/.eide/log
+/.eide.usr.ctx.json
+
+# project out
+/build/
+/bin/
+/obj/
+/out/
+
+# Keil / ARM generated outputs
+*.axf
+*.s19
+*.hex
+*.bin
+*.elf
+*.map
+*.lnp
+*.objlist
+*.htm
+
+# Compilation artifacts
+*.o
+*.obj
+*.d
+*.dep
+*.lst
+*.tmp
+*.bak
+*.log
+
+# Build system files
+builder.params
+compile_commands.json
+
+# eide template
+*.ept
+*.eide-template
+
+# Editor/IDE
+*.swp
+*~
+Thumbs.db
+.DS_Store
+
+# Optional: ignore local environment files
+.env
+
+# If you want to also ignore any other generated folders, add them here

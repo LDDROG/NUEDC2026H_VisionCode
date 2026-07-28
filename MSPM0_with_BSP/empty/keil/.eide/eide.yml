@@ -1,0 +1,196 @@
+version: "4.1"
+name: empty_LP_MSPM0G3507_nortos_keil
+type: ARM
+deviceName: null
+packDir: null
+srcDirs:
+  - ../third_party/RTOS
+  - ../bsp
+  - ../third_party/IQmath
+  - ../models
+  - ../models/AS5600
+  - ../third_party/SEGGER
+  - ../third_party/littlefs-2.11.2
+  - ../third_party/nanoMODBUS
+  - ../third_party/printf
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Source
+      files:
+        - path: ../empty.c
+        - path: ../empty.syscfg
+        - path: startup_mspm0g350x_uvision.s
+        - path: ../ti_msp_dl_config.h
+        - path: ../ti_msp_dl_config.c
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 6abbda591357fb930bfa5aee789c3bf7
+targets:
+  empty_LP_MSPM0G3507_nortos_keil:
+    cppPreprocessAttrs:
+      defineList:
+        - __MSPM0G3507__
+      incList:
+        - ../../source/third_party/CMSIS/Core/Include
+        - ../../source
+        - .cmsis/include
+        - RTE/_empty_LP_MSPM0G3507_nortos_keil
+        - ../third_party/RTOS
+        - ../third_party/RTOS/include
+        - ../third_party/RTOS/portable
+        - ../bsp
+        - ../bsp/pwm
+        - ..
+        - ../bsp/iic
+        - ../bsp/usart
+        - ../third_party/IQmath
+        - ../third_party/IQmath/_IQNfunctions
+        - ../third_party/IQmath/include
+        - ../third_party/IQmath/source
+        - ../third_party/IQmath/support
+        - ../models
+        - ../models/AS5600
+        - ../third_party/SEGGER
+        - ../third_party/SEGGER/Config
+        - ../third_party/SEGGER/RTT
+        - ../bsp/log
+        - ../bsp/time
+        - ../bsp/gpio
+        - ../bsp/spi
+        - ../models/W25Qx
+        - ../third_party/littlefs-2.11.2
+        - ../models/mpu6500
+        - ../bsp/can
+        - ../third_party/nanoMODBUS
+        - ../third_party/nanoMODBUS/nmbs
+        - ../third_party/printf
+        - ../models/TJCuartscreen
+      libList: []
+    excludeList:
+      - ../models/w25q128.c
+      - ../models/foc_motor
+      - ../bsp/can/bsp_can.c
+      - ../bsp/can
+    settings:
+      debugger: cortex-debug
+    toolchain: AC6
+    toolchainConfigMap:
+      AC6:
+        archExtensions: ""
+        cpuType: Cortex-M0+
+        floatingPointHardware: none
+        options:
+          version: 3
+          afterBuildTasks: []
+          asm-compiler:
+            $use: asm-auto
+          beforeBuildTasks:
+            - name: ""
+              abortAfterFailed: true
+              command: ""
+              disable: true
+              stopBuildAfterFailed: true
+          c/cpp-compiler:
+            language-c: c99
+            language-cpp: c++11
+            one-elf-section-per-function: true
+            optimization: level-0
+            short-enums#wchar: true
+            warnings: misra-compatible
+          global:
+            output-debug-info: enable
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            misc-controls: ../../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x/driverlib.a
+            output-format: elf
+        scatterFilePath: mspm0g3507.sct
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: true
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: MSPM0G3507
+          vendor: TI
+        otherCmds: ""
+        proType: 1
+        speed: 10000
+    uploader: JLink

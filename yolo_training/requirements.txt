@@ -1,0 +1,22 @@
+# YOLOv11n 训练 + MaixCam 模型转换 依赖
+
+# 核心训练框架
+ultralytics>=8.3.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 数据集处理
+opencv-python>=4.8.0
+pillow>=10.0.0
+pyyaml>=6.0
+
+# ONNX 导出
+onnx>=1.15.0
+onnxsim>=0.4.0
+onnxruntime>=1.16.0
+
+# 可选: ONNX 可视化 (查看模型结构, 确定输出节点名)
+# pip install netron
+
+# 可选: tpu-mlir 本地转换 (仅 Linux, 推荐 Docker)
+# https://github.com/sophgo/tpu-mlir

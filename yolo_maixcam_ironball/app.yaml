@@ -1,0 +1,10 @@
+id: yolo11s_ironball
+name: YOLO11s 钢球检测
+name[zh]: YOLO11s 钢球检测
+version: 1.0.0
+author: LDD_ROG
+desc: YOLO11s 448x448 钢球目标检测，mAP50=0.935
+files:
+  - app.yaml
+  - main.py
+  - ironball_yolo11_best.mud

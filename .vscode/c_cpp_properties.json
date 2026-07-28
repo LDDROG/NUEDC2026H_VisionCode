@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "MSPM0G3507",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/ti/mspm0_sdk_2_10_00_04/source",
+                "C:/ti/mspm0_sdk_2_10_00_04/source/ti/devices",
+                "C:/ti/ti-cgt-arm_16.9.6.LTS/include"
+            ],
+            "defines": [
+                "__MSPM0G3507__"
+            ],
+            "cStandard": "c99",
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl.exe"
+        }
+    ],
+    "version": 4
+}
