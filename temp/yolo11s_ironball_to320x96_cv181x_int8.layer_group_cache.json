@@ -1,0 +1,1804 @@
+{
+  "opt": 2,
+  "total subfunc": 2,
+  "subfunc_0": {
+    "subfunc idx": 0,
+    "GroupLayer": [],
+    "GlobalLayer": [
+      {
+        "func_idx": 0,
+        "group_cost": 0,
+        "index": 0,
+        "loc": "images/model.0/conv/Conv_output_0_Conv_si8"
+      },
+      {
+        "func_idx": 1,
+        "group_cost": 0,
+        "index": 1,
+        "loc": "func.return"
+      }
+    ],
+    "CyclePrefixSum": [
+      {
+        "cycle_prefix_sum": 0,
+        "index": 0,
+        "prefix_end_idx": 0
+      },
+      {
+        "cycle_prefix_sum": 0,
+        "index": 1,
+        "prefix_end_idx": 1
+      }
+    ]
+  },
+  "subfunc_1": {
+    "subfunc idx": 1,
+    "GroupLayer": [
+      {
+        "base_group_idx": 0,
+        "start_idx": 0,
+        "end_idx": 5,
+        "func_start_idx": 0,
+        "func_end_idx": 5,
+        "group_cost": 564618,
+        "index": 0,
+        "locs": [
+          "/model.0/conv/Conv_output_0_Conv",
+          "/model.0/act/Mul_output_0_Mul",
+          "/model.1/conv/Conv_output_0_Conv",
+          "/model.1/act/Mul_output_0_Mul",
+          "/model.2/cv1/conv/Conv_output_0_Conv",
+          "/model.2/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 3,
+        "start_idx": 0,
+        "end_idx": 1,
+        "func_start_idx": 8,
+        "func_end_idx": 9,
+        "group_cost": 91791,
+        "index": 3,
+        "locs": [
+          "/model.2/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.2/m.0/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 3,
+        "start_idx": 2,
+        "end_idx": 7,
+        "func_start_idx": 10,
+        "func_end_idx": 15,
+        "group_cost": 404632,
+        "index": 4,
+        "locs": [
+          "/model.2/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.2/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.2/m.0/Add_output_0_Add",
+          "/model.2/Concat_output_0_Concat",
+          "/model.2/cv2/conv/Conv_output_0_Conv",
+          "/model.2/cv2/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 3,
+        "start_idx": 8,
+        "end_idx": 11,
+        "func_start_idx": 16,
+        "func_end_idx": 19,
+        "group_cost": 675618,
+        "index": 5,
+        "locs": [
+          "/model.3/conv/Conv_output_0_Conv",
+          "/model.3/act/Mul_output_0_Mul",
+          "/model.4/cv1/conv/Conv_output_0_Conv",
+          "/model.4/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          6,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 6,
+        "start_idx": 1,
+        "end_idx": 7,
+        "func_start_idx": 23,
+        "func_end_idx": 29,
+        "group_cost": 340465,
+        "index": 9,
+        "locs": [
+          "/model.4/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.4/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.4/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.4/m.0/Add_output_0_Add",
+          "/model.4/Concat_output_0_Concat",
+          "/model.4/cv2/conv/Conv_output_0_Conv",
+          "/model.4/cv2/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 6,
+        "start_idx": 9,
+        "end_idx": 11,
+        "func_start_idx": 31,
+        "func_end_idx": 33,
+        "group_cost": 93977,
+        "index": 11,
+        "locs": [
+          "/model.5/act/Mul_output_0_Mul",
+          "/model.6/cv1/conv/Conv_output_0_Conv",
+          "/model.6/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 9,
+        "start_idx": 0,
+        "end_idx": 19,
+        "func_start_idx": 36,
+        "func_end_idx": 55,
+        "group_cost": 337428,
+        "index": 14,
+        "locs": [
+          "/model.6/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.6/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.6/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.6/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.6/m.0/m/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.6/m.0/m/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.6/m.0/m/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.6/m.0/m/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.6/m.0/m/m.0/Add_output_0_Add",
+          "/model.6/m.0/m/m.1/cv1/conv/Conv_output_0_Conv",
+          "/model.6/m.0/m/m.1/cv1/act/Mul_output_0_Mul",
+          "/model.6/m.0/m/m.1/cv2/conv/Conv_output_0_Conv",
+          "/model.6/m.0/m/m.1/cv2/act/Mul_output_0_Mul",
+          "/model.6/m.0/m/m.1/Add_output_0_Add",
+          "/model.6/m.0/Concat_output_0_Concat",
+          "/model.6/m.0/cv3/conv/Conv_output_0_Conv",
+          "/model.6/m.0/cv3/act/Mul_output_0_Mul",
+          "/model.6/Concat_output_0_Concat",
+          "/model.6/cv2/conv/Conv_output_0_Conv",
+          "/model.6/cv2/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 12,
+        "start_idx": 0,
+        "end_idx": 4,
+        "func_start_idx": 62,
+        "func_end_idx": 66,
+        "group_cost": 74166,
+        "index": 21,
+        "locs": [
+          "/model.8/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.8/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.8/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.8/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.8/m.0/m/m.0/cv1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 12,
+        "start_idx": 5,
+        "end_idx": 6,
+        "func_start_idx": 67,
+        "func_end_idx": 68,
+        "group_cost": 57821,
+        "index": 22,
+        "locs": [
+          "/model.8/m.0/m/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.8/m.0/m/m.0/cv2/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 12,
+        "start_idx": 7,
+        "end_idx": 9,
+        "func_start_idx": 69,
+        "func_end_idx": 71,
+        "group_cost": 59113,
+        "index": 23,
+        "locs": [
+          "/model.8/m.0/m/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.8/m.0/m/m.0/Add_output_0_Add",
+          "/model.8/m.0/m/m.1/cv1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 12,
+        "start_idx": 10,
+        "end_idx": 16,
+        "func_start_idx": 72,
+        "func_end_idx": 78,
+        "group_cost": 81494,
+        "index": 24,
+        "locs": [
+          "/model.8/m.0/m/m.1/cv1/act/Mul_output_0_Mul",
+          "/model.8/m.0/m/m.1/cv2/conv/Conv_output_0_Conv",
+          "/model.8/m.0/m/m.1/cv2/act/Mul_output_0_Mul",
+          "/model.8/m.0/m/m.1/Add_output_0_Add",
+          "/model.8/m.0/Concat_output_0_Concat",
+          "/model.8/m.0/cv3/conv/Conv_output_0_Conv",
+          "/model.8/m.0/cv3/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 12,
+        "start_idx": 19,
+        "end_idx": 23,
+        "func_start_idx": 81,
+        "func_end_idx": 85,
+        "group_cost": 73174,
+        "index": 27,
+        "locs": [
+          "/model.8/cv2/act/Mul_output_0_Mul",
+          "/model.9/cv1/conv/Conv_output_0_Conv",
+          "/model.9/m/MaxPool_output_0_MaxPool",
+          "/model.9/m_1/MaxPool_output_0_MaxPool",
+          "/model.9/m_2/MaxPool_output_0_MaxPool"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 15,
+        "start_idx": 0,
+        "end_idx": 3,
+        "func_start_idx": 93,
+        "func_end_idx": 96,
+        "group_cost": 42896,
+        "index": 35,
+        "locs": [
+          "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_2",
+          "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_1",
+          "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_0",
+          "/model.10/m/m.0/attn/pe/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 29,
+        "start_idx": 0,
+        "end_idx": 4,
+        "func_start_idx": 114,
+        "func_end_idx": 118,
+        "group_cost": 69608,
+        "index": 53,
+        "locs": [
+          "/model.10/m/m.0/attn/Reshape_1_output_0_Reshape/model.10/m/m.0/attn/Add_output_0_Add_si8",
+          "/model.10/m/m.0/attn/Add_output_0_Add",
+          "/model.10/m/m.0/attn/proj/conv/Conv_output_0_Conv",
+          "/model.10/m/m.0/Add_output_0_Add",
+          "/model.10/m/m.0/ffn/ffn.0/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 29,
+        "start_idx": 5,
+        "end_idx": 8,
+        "func_start_idx": 119,
+        "func_end_idx": 122,
+        "group_cost": 60870,
+        "index": 54,
+        "locs": [
+          "/model.10/m/m.0/ffn/ffn.0/act/Mul_output_0_Mul",
+          "/model.10/m/m.0/ffn/ffn.1/conv/Conv_output_0_Conv",
+          "/model.10/m/m.0/Add_1_output_0_Add",
+          "/model.10/Concat_output_0_Concat"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 29,
+        "start_idx": 10,
+        "end_idx": 12,
+        "func_start_idx": 124,
+        "func_end_idx": 126,
+        "group_cost": 60373,
+        "index": 56,
+        "locs": [
+          "/model.10/cv2/act/Mul_output_0_Mul",
+          "/model.11/Resize_output_0_Resize",
+          "/model.12/Concat_output_0_Concat"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 32,
+        "start_idx": 0,
+        "end_idx": 2,
+        "func_start_idx": 131,
+        "func_end_idx": 133,
+        "group_cost": 164557,
+        "index": 61,
+        "locs": [
+          "/model.13/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.13/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.13/m.0/cv2/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 32,
+        "start_idx": 3,
+        "end_idx": 7,
+        "func_start_idx": 134,
+        "func_end_idx": 138,
+        "group_cost": 138739,
+        "index": 62,
+        "locs": [
+          "/model.13/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.13/m.0/Add_output_0_Add",
+          "/model.13/Concat_output_0_Concat",
+          "/model.13/cv2/conv/Conv_output_0_Conv",
+          "/model.13/cv2/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 32,
+        "start_idx": 8,
+        "end_idx": 11,
+        "func_start_idx": 139,
+        "func_end_idx": 142,
+        "group_cost": 356996,
+        "index": 63,
+        "locs": [
+          "/model.14/Resize_output_0_Resize",
+          "/model.15/Concat_output_0_Concat",
+          "/model.16/cv1/conv/Conv_output_0_Conv",
+          "/model.16/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 35,
+        "start_idx": 0,
+        "end_idx": 12,
+        "func_start_idx": 145,
+        "func_end_idx": 157,
+        "group_cost": 448617,
+        "index": 66,
+        "locs": [
+          "/model.16/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.16/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.16/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.16/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.16/m.0/Add_output_0_Add",
+          "/model.16/Concat_output_0_Concat",
+          "/model.16/cv2/conv/Conv_output_0_Conv",
+          "/model.16/cv2/act/Mul_output_0_Mul",
+          "/model.23/cv3.0/cv3.0.0/cv3.0.0.0/conv/Conv_output_0_Conv",
+          "/model.23/cv3.0/cv3.0.0/cv3.0.0.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.0/cv3.0.0/cv3.0.0.1/conv/Conv_output_0_Conv",
+          "/model.23/cv3.0/cv3.0.0/cv3.0.0.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.0/cv3.0.1/cv3.0.1.0/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 35,
+        "start_idx": 13,
+        "end_idx": 17,
+        "func_start_idx": 158,
+        "func_end_idx": 162,
+        "group_cost": 381301,
+        "index": 67,
+        "locs": [
+          "/model.23/cv3.0/cv3.0.1/cv3.0.1.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.0/cv3.0.1/cv3.0.1.1/conv/Conv_output_0_Conv",
+          "/model.23/cv3.0/cv3.0.1/cv3.0.1.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.0/cv3.0.2/Conv_output_0_Conv",
+          "/model.23/cv2.0/cv2.0.0/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 35,
+        "start_idx": 18,
+        "end_idx": 19,
+        "func_start_idx": 163,
+        "func_end_idx": 164,
+        "group_cost": 156237,
+        "index": 68,
+        "locs": [
+          "/model.23/cv2.0/cv2.0.0/act/Mul_output_0_Mul",
+          "/model.23/cv2.0/cv2.0.1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 35,
+        "start_idx": 20,
+        "end_idx": 23,
+        "func_start_idx": 165,
+        "func_end_idx": 168,
+        "group_cost": 190555,
+        "index": 69,
+        "locs": [
+          "/model.23/cv2.0/cv2.0.1/act/Mul_output_0_Mul",
+          "/model.23/cv2.0/cv2.0.2/Conv_output_0_Conv",
+          "/model.17/conv/Conv_output_0_Conv",
+          "/model.17/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 35,
+        "start_idx": 24,
+        "end_idx": 26,
+        "func_start_idx": 169,
+        "func_end_idx": 171,
+        "group_cost": 128159,
+        "index": 70,
+        "locs": [
+          "/model.18/Concat_output_0_Concat",
+          "/model.19/cv1/conv/Conv_output_0_Conv",
+          "/model.19/cv1/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 40,
+        "start_idx": 0,
+        "end_idx": 10,
+        "func_start_idx": 176,
+        "func_end_idx": 186,
+        "group_cost": 348364,
+        "index": 75,
+        "locs": [
+          "/model.19/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.19/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.19/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.19/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.19/m.0/Add_output_0_Add",
+          "/model.19/Concat_output_0_Concat",
+          "/model.19/cv2/conv/Conv_output_0_Conv",
+          "/model.19/cv2/act/Mul_output_0_Mul",
+          "/model.23/cv3.1/cv3.1.0/cv3.1.0.0/conv/Conv_output_0_Conv",
+          "/model.23/cv3.1/cv3.1.0/cv3.1.0.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.1/cv3.1.0/cv3.1.0.1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 40,
+        "start_idx": 11,
+        "end_idx": 21,
+        "func_start_idx": 187,
+        "func_end_idx": 197,
+        "group_cost": 239370,
+        "index": 76,
+        "locs": [
+          "/model.23/cv3.1/cv3.1.0/cv3.1.0.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.1/cv3.1.1/cv3.1.1.0/conv/Conv_output_0_Conv",
+          "/model.23/cv3.1/cv3.1.1/cv3.1.1.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.1/cv3.1.1/cv3.1.1.1/conv/Conv_output_0_Conv",
+          "/model.23/cv3.1/cv3.1.1/cv3.1.1.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.1/cv3.1.2/Conv_output_0_Conv",
+          "/model.23/cv2.1/cv2.1.0/conv/Conv_output_0_Conv",
+          "/model.23/cv2.1/cv2.1.0/act/Mul_output_0_Mul",
+          "/model.23/cv2.1/cv2.1.1/conv/Conv_output_0_Conv",
+          "/model.23/cv2.1/cv2.1.1/act/Mul_output_0_Mul",
+          "/model.23/cv2.1/cv2.1.2/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 0,
+        "end_idx": 4,
+        "func_start_idx": 207,
+        "func_end_idx": 211,
+        "group_cost": 74166,
+        "index": 86,
+        "locs": [
+          "/model.22/m.0/cv2/conv/Conv_output_0_Conv",
+          "/model.22/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.22/m.0/cv1/conv/Conv_output_0_Conv",
+          "/model.22/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.22/m.0/m/m.0/cv1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 5,
+        "end_idx": 6,
+        "func_start_idx": 212,
+        "func_end_idx": 213,
+        "group_cost": 57821,
+        "index": 87,
+        "locs": [
+          "/model.22/m.0/m/m.0/cv1/act/Mul_output_0_Mul",
+          "/model.22/m.0/m/m.0/cv2/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 7,
+        "end_idx": 9,
+        "func_start_idx": 214,
+        "func_end_idx": 216,
+        "group_cost": 59113,
+        "index": 88,
+        "locs": [
+          "/model.22/m.0/m/m.0/cv2/act/Mul_output_0_Mul",
+          "/model.22/m.0/m/m.0/Add_output_0_Add",
+          "/model.22/m.0/m/m.1/cv1/conv/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 10,
+        "end_idx": 16,
+        "func_start_idx": 217,
+        "func_end_idx": 223,
+        "group_cost": 81494,
+        "index": 89,
+        "locs": [
+          "/model.22/m.0/m/m.1/cv1/act/Mul_output_0_Mul",
+          "/model.22/m.0/m/m.1/cv2/conv/Conv_output_0_Conv",
+          "/model.22/m.0/m/m.1/cv2/act/Mul_output_0_Mul",
+          "/model.22/m.0/m/m.1/Add_output_0_Add",
+          "/model.22/m.0/Concat_output_0_Concat",
+          "/model.22/m.0/cv3/conv/Conv_output_0_Conv",
+          "/model.22/m.0/cv3/act/Mul_output_0_Mul"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 19,
+        "end_idx": 28,
+        "func_start_idx": 226,
+        "func_end_idx": 235,
+        "group_cost": 49231,
+        "index": 92,
+        "locs": [
+          "/model.22/cv2/act/Mul_output_0_Mul",
+          "/model.23/cv3.2/cv3.2.0/cv3.2.0.0/conv/Conv_output_0_Conv",
+          "/model.23/cv3.2/cv3.2.0/cv3.2.0.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.2/cv3.2.0/cv3.2.0.1/conv/Conv_output_0_Conv",
+          "/model.23/cv3.2/cv3.2.0/cv3.2.0.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.2/cv3.2.1/cv3.2.1.0/conv/Conv_output_0_Conv",
+          "/model.23/cv3.2/cv3.2.1/cv3.2.1.0/act/Mul_output_0_Mul",
+          "/model.23/cv3.2/cv3.2.1/cv3.2.1.1/conv/Conv_output_0_Conv",
+          "/model.23/cv3.2/cv3.2.1/cv3.2.1.1/act/Mul_output_0_Mul",
+          "/model.23/cv3.2/cv3.2.2/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "base_group_idx": 45,
+        "start_idx": 30,
+        "end_idx": 33,
+        "func_start_idx": 237,
+        "func_end_idx": 240,
+        "group_cost": 16779,
+        "index": 94,
+        "locs": [
+          "/model.23/cv2.2/cv2.2.0/act/Mul_output_0_Mul",
+          "/model.23/cv2.2/cv2.2.1/conv/Conv_output_0_Conv",
+          "/model.23/cv2.2/cv2.2.1/act/Mul_output_0_Mul",
+          "/model.23/cv2.2/cv2.2.2/Conv_output_0_Conv"
+        ],
+        "shape_secs": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "GlobalLayer": [
+      {
+        "index": 1,
+        "func_idx": 6,
+        "group_cost": 0,
+        "loc": "/model.2/Split_output_1_Split"
+      },
+      {
+        "index": 2,
+        "func_idx": 7,
+        "group_cost": 0,
+        "loc": "/model.2/Split_output_0_Split"
+      },
+      {
+        "index": 6,
+        "func_idx": 20,
+        "group_cost": 0,
+        "loc": "/model.4/Split_output_1_Split"
+      },
+      {
+        "index": 7,
+        "func_idx": 21,
+        "group_cost": 0,
+        "loc": "/model.4/Split_output_0_Split"
+      },
+      {
+        "index": 8,
+        "func_idx": 22,
+        "group_cost": 0,
+        "loc": "/model.4/m.0/cv1/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 10,
+        "func_idx": 30,
+        "group_cost": 0,
+        "loc": "/model.5/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 12,
+        "func_idx": 34,
+        "group_cost": 0,
+        "loc": "/model.6/Split_output_1_Split"
+      },
+      {
+        "index": 13,
+        "func_idx": 35,
+        "group_cost": 0,
+        "loc": "/model.6/Split_output_0_Split"
+      },
+      {
+        "index": 15,
+        "func_idx": 56,
+        "group_cost": 0,
+        "loc": "/model.7/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 16,
+        "func_idx": 57,
+        "group_cost": 0,
+        "loc": "/model.7/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 17,
+        "func_idx": 58,
+        "group_cost": 0,
+        "loc": "/model.8/cv1/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 18,
+        "func_idx": 59,
+        "group_cost": 0,
+        "loc": "/model.8/cv1/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 19,
+        "func_idx": 60,
+        "group_cost": 0,
+        "loc": "/model.8/Split_output_1_Split"
+      },
+      {
+        "index": 20,
+        "func_idx": 61,
+        "group_cost": 0,
+        "loc": "/model.8/Split_output_0_Split"
+      },
+      {
+        "index": 25,
+        "func_idx": 79,
+        "group_cost": 0,
+        "loc": "/model.8/Concat_output_0_Concat"
+      },
+      {
+        "index": 26,
+        "func_idx": 80,
+        "group_cost": 0,
+        "loc": "/model.8/cv2/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 28,
+        "func_idx": 86,
+        "group_cost": 0,
+        "loc": "/model.9/Concat_output_0_Concat"
+      },
+      {
+        "index": 29,
+        "func_idx": 87,
+        "group_cost": 0,
+        "loc": "/model.9/cv2/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 30,
+        "func_idx": 88,
+        "group_cost": 0,
+        "loc": "/model.9/cv2/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 31,
+        "func_idx": 89,
+        "group_cost": 0,
+        "loc": "/model.10/cv1/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 32,
+        "func_idx": 90,
+        "group_cost": 0,
+        "loc": "/model.10/cv1/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 33,
+        "func_idx": 91,
+        "group_cost": 0,
+        "loc": "/model.10/Split_output_1_Split"
+      },
+      {
+        "index": 34,
+        "func_idx": 92,
+        "group_cost": 0,
+        "loc": "/model.10/Split_output_0_Split"
+      },
+      {
+        "index": 36,
+        "func_idx": 97,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_0_reshape_reshape_fuse_0"
+      },
+      {
+        "index": 37,
+        "func_idx": 98,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_2_reshape"
+      },
+      {
+        "index": 38,
+        "func_idx": 99,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Transpose_output_0_Transpose"
+      },
+      {
+        "index": 39,
+        "func_idx": 100,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_1_reshape"
+      },
+      {
+        "index": 40,
+        "func_idx": 101,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_1_reshape/model.10/m/m.0/attn/MatMul_output_0_MatMul_bf16"
+      },
+      {
+        "index": 41,
+        "func_idx": 102,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Transpose_output_0_Transpose/model.10/m/m.0/attn/MatMul_output_0_MatMul_bf16"
+      },
+      {
+        "index": 42,
+        "func_idx": 103,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/qkv/conv/Conv_output_0_Conv_slice_0_reshape_reshape_fuse_0/model.10/m/m.0/attn/MatMul_1_output_0_MatMul_bf16"
+      },
+      {
+        "index": 43,
+        "func_idx": 104,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/MatMul_output_0_MatMul"
+      },
+      {
+        "index": 44,
+        "func_idx": 105,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/MatMul_output_0_MatMul/model.10/m/m.0/attn/Mul_output_0_Mul_si8"
+      },
+      {
+        "index": 45,
+        "func_idx": 106,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Mul_output_0_Mul"
+      },
+      {
+        "index": 46,
+        "func_idx": 107,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Mul_output_0_Mul/model.10/m/m.0/attn/Softmax_output_0_Softmax_bf16"
+      },
+      {
+        "index": 47,
+        "func_idx": 108,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Softmax_output_0_Softmax"
+      },
+      {
+        "index": 48,
+        "func_idx": 109,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Softmax_output_0_Softmax/model.10/m/m.0/attn/Transpose_1_output_0_Transpose_si8"
+      },
+      {
+        "index": 49,
+        "func_idx": 110,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Transpose_1_output_0_Transpose"
+      },
+      {
+        "index": 50,
+        "func_idx": 111,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Transpose_1_output_0_Transpose/model.10/m/m.0/attn/MatMul_1_output_0_MatMul_bf16"
+      },
+      {
+        "index": 51,
+        "func_idx": 112,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/MatMul_1_output_0_MatMul"
+      },
+      {
+        "index": 52,
+        "func_idx": 113,
+        "group_cost": 0,
+        "loc": "/model.10/m/m.0/attn/Reshape_1_output_0_Reshape"
+      },
+      {
+        "index": 55,
+        "func_idx": 123,
+        "group_cost": 0,
+        "loc": "/model.10/cv2/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 57,
+        "func_idx": 127,
+        "group_cost": 0,
+        "loc": "/model.13/cv1/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 58,
+        "func_idx": 128,
+        "group_cost": 0,
+        "loc": "/model.13/cv1/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 59,
+        "func_idx": 129,
+        "group_cost": 0,
+        "loc": "/model.13/Split_output_1_Split"
+      },
+      {
+        "index": 60,
+        "func_idx": 130,
+        "group_cost": 0,
+        "loc": "/model.13/Split_output_0_Split"
+      },
+      {
+        "index": 64,
+        "func_idx": 143,
+        "group_cost": 0,
+        "loc": "/model.16/Split_output_1_Split"
+      },
+      {
+        "index": 65,
+        "func_idx": 144,
+        "group_cost": 0,
+        "loc": "/model.16/Split_output_0_Split"
+      },
+      {
+        "index": 71,
+        "func_idx": 172,
+        "group_cost": 0,
+        "loc": "/model.19/Split_output_1_Split"
+      },
+      {
+        "index": 72,
+        "func_idx": 173,
+        "group_cost": 0,
+        "loc": "/model.19/Split_output_0_Split"
+      },
+      {
+        "index": 73,
+        "func_idx": 174,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_3_output_0_Reshape"
+      },
+      {
+        "index": 74,
+        "func_idx": 175,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_output_0_Reshape"
+      },
+      {
+        "index": 77,
+        "func_idx": 198,
+        "group_cost": 0,
+        "loc": "/model.20/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 78,
+        "func_idx": 199,
+        "group_cost": 0,
+        "loc": "/model.20/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 79,
+        "func_idx": 200,
+        "group_cost": 0,
+        "loc": "/model.21/Concat_output_0_Concat"
+      },
+      {
+        "index": 80,
+        "func_idx": 201,
+        "group_cost": 0,
+        "loc": "/model.22/cv1/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 81,
+        "func_idx": 202,
+        "group_cost": 0,
+        "loc": "/model.22/cv1/act/Mul_output_0_Mul"
+      },
+      {
+        "index": 82,
+        "func_idx": 203,
+        "group_cost": 0,
+        "loc": "/model.22/Split_output_1_Split"
+      },
+      {
+        "index": 83,
+        "func_idx": 204,
+        "group_cost": 0,
+        "loc": "/model.22/Split_output_0_Split"
+      },
+      {
+        "index": 84,
+        "func_idx": 205,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_4_output_0_Reshape"
+      },
+      {
+        "index": 85,
+        "func_idx": 206,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_1_output_0_Reshape"
+      },
+      {
+        "index": 90,
+        "func_idx": 224,
+        "group_cost": 0,
+        "loc": "/model.22/Concat_output_0_Concat"
+      },
+      {
+        "index": 91,
+        "func_idx": 225,
+        "group_cost": 0,
+        "loc": "/model.22/cv2/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 93,
+        "func_idx": 236,
+        "group_cost": 0,
+        "loc": "/model.23/cv2.2/cv2.2.0/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 95,
+        "func_idx": 241,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_2_output_0_Reshape"
+      },
+      {
+        "index": 96,
+        "func_idx": 242,
+        "group_cost": 0,
+        "loc": "/model.23/Concat_output_0_Concat"
+      },
+      {
+        "index": 97,
+        "func_idx": 243,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/Reshape_output_0_Reshape"
+      },
+      {
+        "index": 98,
+        "func_idx": 244,
+        "group_cost": 0,
+        "loc": "/model.23/Reshape_5_output_0_Reshape"
+      },
+      {
+        "index": 99,
+        "func_idx": 245,
+        "group_cost": 0,
+        "loc": "/model.23/Concat_1_output_0_Concat"
+      },
+      {
+        "index": 100,
+        "func_idx": 246,
+        "group_cost": 0,
+        "loc": "/model.23/Sigmoid_output_0_Sigmoid"
+      },
+      {
+        "index": 101,
+        "func_idx": 247,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/Transpose_output_0_Transpose_r_reordered/model.23/dfl/Transpose_1_output_0_Transpose_bf16_/model.23/dfl/Transpose_output_0_Transpose_r_reordered"
+      },
+      {
+        "index": 102,
+        "func_idx": 248,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/Transpose_1_output_0_Transpose_/model.23/dfl/Transpose_output_0_Transpose_r_reordered_/model.23/dfl/Transpose_output_0_Transpose_r_reordered/model.23/dfl/Transpose_1_output_0_Transpose_bf16"
+      },
+      {
+        "index": 103,
+        "func_idx": 249,
+        "group_cost": 0,
+        "loc": "/model.23/Sigmoid_output_0_Sigmoid_f32"
+      },
+      {
+        "index": 104,
+        "func_idx": 250,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/Transpose_1_output_0_Transpose/model.23/dfl/conv/Conv_output_0_Conv_si8_/model.23/dfl/Transpose_output_0_Transpose_r_reordered_/model.23/dfl/Transpose_output_0_Transpose_r_reordered/model.23/dfl/Transpose_1_output_0_Transpose_bf16_/model.23/dfl/Transpose_1_output_0_Transpose"
+      },
+      {
+        "index": 105,
+        "func_idx": 251,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/Transpose_output_0_Transpose_r_reordered_/model.23/dfl/Transpose_output_0_Transpose_r_reordered/model.23/dfl/Transpose_1_output_0_Transpose_bf16_/model.23/dfl/Transpose_1_output_0_Transpose_/model.23/dfl/Transpose_1_output_0_Transpose/model.23/dfl/conv/Conv_output_0_Conv_si8"
+      },
+      {
+        "index": 106,
+        "func_idx": 252,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/conv/Conv_output_0_Conv"
+      },
+      {
+        "index": 107,
+        "func_idx": 253,
+        "group_cost": 0,
+        "loc": "/model.23/dfl/conv/Conv_output_0_Conv_f32"
+      },
+      {
+        "index": 108,
+        "func_idx": 254,
+        "group_cost": 0,
+        "loc": "func.return"
+      }
+    ],
+    "CyclePrefixSum": [
+      {
+        "index": 0,
+        "prefix_end_idx": 5,
+        "cycle_prefix_sum": 564618
+      },
+      {
+        "index": 1,
+        "prefix_end_idx": 6,
+        "cycle_prefix_sum": 564618
+      },
+      {
+        "index": 2,
+        "prefix_end_idx": 7,
+        "cycle_prefix_sum": 564618
+      },
+      {
+        "index": 3,
+        "prefix_end_idx": 9,
+        "cycle_prefix_sum": 656409
+      },
+      {
+        "index": 4,
+        "prefix_end_idx": 15,
+        "cycle_prefix_sum": 1061041
+      },
+      {
+        "index": 5,
+        "prefix_end_idx": 19,
+        "cycle_prefix_sum": 1736659
+      },
+      {
+        "index": 6,
+        "prefix_end_idx": 20,
+        "cycle_prefix_sum": 1736659
+      },
+      {
+        "index": 7,
+        "prefix_end_idx": 21,
+        "cycle_prefix_sum": 1736659
+      },
+      {
+        "index": 8,
+        "prefix_end_idx": 22,
+        "cycle_prefix_sum": 1736659
+      },
+      {
+        "index": 9,
+        "prefix_end_idx": 29,
+        "cycle_prefix_sum": 2077124
+      },
+      {
+        "index": 10,
+        "prefix_end_idx": 30,
+        "cycle_prefix_sum": 2077124
+      },
+      {
+        "index": 11,
+        "prefix_end_idx": 33,
+        "cycle_prefix_sum": 2171101
+      },
+      {
+        "index": 12,
+        "prefix_end_idx": 34,
+        "cycle_prefix_sum": 2171101
+      },
+      {
+        "index": 13,
+        "prefix_end_idx": 35,
+        "cycle_prefix_sum": 2171101
+      },
+      {
+        "index": 14,
+        "prefix_end_idx": 55,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 15,
+        "prefix_end_idx": 56,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 16,
+        "prefix_end_idx": 57,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 17,
+        "prefix_end_idx": 58,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 18,
+        "prefix_end_idx": 59,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 19,
+        "prefix_end_idx": 60,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 20,
+        "prefix_end_idx": 61,
+        "cycle_prefix_sum": 2508529
+      },
+      {
+        "index": 21,
+        "prefix_end_idx": 66,
+        "cycle_prefix_sum": 2582695
+      },
+      {
+        "index": 22,
+        "prefix_end_idx": 68,
+        "cycle_prefix_sum": 2640516
+      },
+      {
+        "index": 23,
+        "prefix_end_idx": 71,
+        "cycle_prefix_sum": 2699629
+      },
+      {
+        "index": 24,
+        "prefix_end_idx": 78,
+        "cycle_prefix_sum": 2781123
+      },
+      {
+        "index": 25,
+        "prefix_end_idx": 79,
+        "cycle_prefix_sum": 2781123
+      },
+      {
+        "index": 26,
+        "prefix_end_idx": 80,
+        "cycle_prefix_sum": 2781123
+      },
+      {
+        "index": 27,
+        "prefix_end_idx": 85,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 28,
+        "prefix_end_idx": 86,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 29,
+        "prefix_end_idx": 87,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 30,
+        "prefix_end_idx": 88,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 31,
+        "prefix_end_idx": 89,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 32,
+        "prefix_end_idx": 90,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 33,
+        "prefix_end_idx": 91,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 34,
+        "prefix_end_idx": 92,
+        "cycle_prefix_sum": 2854297
+      },
+      {
+        "index": 35,
+        "prefix_end_idx": 96,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 36,
+        "prefix_end_idx": 97,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 37,
+        "prefix_end_idx": 98,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 38,
+        "prefix_end_idx": 99,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 39,
+        "prefix_end_idx": 100,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 40,
+        "prefix_end_idx": 101,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 41,
+        "prefix_end_idx": 102,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 42,
+        "prefix_end_idx": 103,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 43,
+        "prefix_end_idx": 104,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 44,
+        "prefix_end_idx": 105,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 45,
+        "prefix_end_idx": 106,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 46,
+        "prefix_end_idx": 107,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 47,
+        "prefix_end_idx": 108,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 48,
+        "prefix_end_idx": 109,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 49,
+        "prefix_end_idx": 110,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 50,
+        "prefix_end_idx": 111,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 51,
+        "prefix_end_idx": 112,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 52,
+        "prefix_end_idx": 113,
+        "cycle_prefix_sum": 2897193
+      },
+      {
+        "index": 53,
+        "prefix_end_idx": 118,
+        "cycle_prefix_sum": 2966801
+      },
+      {
+        "index": 54,
+        "prefix_end_idx": 122,
+        "cycle_prefix_sum": 3027671
+      },
+      {
+        "index": 55,
+        "prefix_end_idx": 123,
+        "cycle_prefix_sum": 3027671
+      },
+      {
+        "index": 56,
+        "prefix_end_idx": 126,
+        "cycle_prefix_sum": 3088044
+      },
+      {
+        "index": 57,
+        "prefix_end_idx": 127,
+        "cycle_prefix_sum": 3088044
+      },
+      {
+        "index": 58,
+        "prefix_end_idx": 128,
+        "cycle_prefix_sum": 3088044
+      },
+      {
+        "index": 59,
+        "prefix_end_idx": 129,
+        "cycle_prefix_sum": 3088044
+      },
+      {
+        "index": 60,
+        "prefix_end_idx": 130,
+        "cycle_prefix_sum": 3088044
+      },
+      {
+        "index": 61,
+        "prefix_end_idx": 133,
+        "cycle_prefix_sum": 3252601
+      },
+      {
+        "index": 62,
+        "prefix_end_idx": 138,
+        "cycle_prefix_sum": 3391340
+      },
+      {
+        "index": 63,
+        "prefix_end_idx": 142,
+        "cycle_prefix_sum": 3748336
+      },
+      {
+        "index": 64,
+        "prefix_end_idx": 143,
+        "cycle_prefix_sum": 3748336
+      },
+      {
+        "index": 65,
+        "prefix_end_idx": 144,
+        "cycle_prefix_sum": 3748336
+      },
+      {
+        "index": 66,
+        "prefix_end_idx": 157,
+        "cycle_prefix_sum": 4196953
+      },
+      {
+        "index": 67,
+        "prefix_end_idx": 162,
+        "cycle_prefix_sum": 4578254
+      },
+      {
+        "index": 68,
+        "prefix_end_idx": 164,
+        "cycle_prefix_sum": 4734491
+      },
+      {
+        "index": 69,
+        "prefix_end_idx": 168,
+        "cycle_prefix_sum": 4925046
+      },
+      {
+        "index": 70,
+        "prefix_end_idx": 171,
+        "cycle_prefix_sum": 5053205
+      },
+      {
+        "index": 71,
+        "prefix_end_idx": 172,
+        "cycle_prefix_sum": 5053205
+      },
+      {
+        "index": 72,
+        "prefix_end_idx": 173,
+        "cycle_prefix_sum": 5053205
+      },
+      {
+        "index": 73,
+        "prefix_end_idx": 174,
+        "cycle_prefix_sum": 5053205
+      },
+      {
+        "index": 74,
+        "prefix_end_idx": 175,
+        "cycle_prefix_sum": 5053205
+      },
+      {
+        "index": 75,
+        "prefix_end_idx": 186,
+        "cycle_prefix_sum": 5401569
+      },
+      {
+        "index": 76,
+        "prefix_end_idx": 197,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 77,
+        "prefix_end_idx": 198,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 78,
+        "prefix_end_idx": 199,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 79,
+        "prefix_end_idx": 200,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 80,
+        "prefix_end_idx": 201,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 81,
+        "prefix_end_idx": 202,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 82,
+        "prefix_end_idx": 203,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 83,
+        "prefix_end_idx": 204,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 84,
+        "prefix_end_idx": 205,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 85,
+        "prefix_end_idx": 206,
+        "cycle_prefix_sum": 5640939
+      },
+      {
+        "index": 86,
+        "prefix_end_idx": 211,
+        "cycle_prefix_sum": 5715105
+      },
+      {
+        "index": 87,
+        "prefix_end_idx": 213,
+        "cycle_prefix_sum": 5772926
+      },
+      {
+        "index": 88,
+        "prefix_end_idx": 216,
+        "cycle_prefix_sum": 5832039
+      },
+      {
+        "index": 89,
+        "prefix_end_idx": 223,
+        "cycle_prefix_sum": 5913533
+      },
+      {
+        "index": 90,
+        "prefix_end_idx": 224,
+        "cycle_prefix_sum": 5913533
+      },
+      {
+        "index": 91,
+        "prefix_end_idx": 225,
+        "cycle_prefix_sum": 5913533
+      },
+      {
+        "index": 92,
+        "prefix_end_idx": 235,
+        "cycle_prefix_sum": 5962764
+      },
+      {
+        "index": 93,
+        "prefix_end_idx": 236,
+        "cycle_prefix_sum": 5962764
+      },
+      {
+        "index": 94,
+        "prefix_end_idx": 240,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 95,
+        "prefix_end_idx": 241,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 96,
+        "prefix_end_idx": 242,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 97,
+        "prefix_end_idx": 243,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 98,
+        "prefix_end_idx": 244,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 99,
+        "prefix_end_idx": 245,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 100,
+        "prefix_end_idx": 246,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 101,
+        "prefix_end_idx": 247,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 102,
+        "prefix_end_idx": 248,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 103,
+        "prefix_end_idx": 249,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 104,
+        "prefix_end_idx": 250,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 105,
+        "prefix_end_idx": 251,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 106,
+        "prefix_end_idx": 252,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 107,
+        "prefix_end_idx": 253,
+        "cycle_prefix_sum": 5979543
+      },
+      {
+        "index": 108,
+        "prefix_end_idx": 254,
+        "cycle_prefix_sum": 5979543
+      }
+    ]
+  }
+}

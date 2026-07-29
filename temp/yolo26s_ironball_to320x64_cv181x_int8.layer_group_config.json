@@ -1,0 +1,31 @@
+{
+  "shape_secs_search_strategy": 0,
+  "structure_detect_opt": true,
+  "sc_method_configs": [
+    {
+      "sc_method": "sc_method_quick_search",
+      "MAX_TRY_NUM": 20
+    },
+    {
+      "sc_method": "sc_method_search_better_v1",
+      "NSECS_SEARCH_RECORD_THRESHOLD": 3,
+      "CSECS_SEARCH_RECORD_THRESHOLD": 3,
+      "DSECS_SEARCH_RECORD_THRESHOLD": 3,
+      "HSECS_SEARCH_RECORD_THRESHOLD": 3,
+      "WSECS_SEARCH_RECORD_THRESHOLD": 3
+    },
+    {
+      "sc_method": "sc_method_search_better_v2",
+      "MAX_NSECS": 32,
+      "MAX_CSECS": 32,
+      "MAX_DSECS": 32,
+      "MAX_HSECS": 32,
+      "MAX_WSECS": 32,
+      "NSECS_SEARCH_RECORD_THRESHOLD": 2,
+      "CSECS_SEARCH_RECORD_THRESHOLD": 2,
+      "DSECS_SEARCH_RECORD_THRESHOLD": 2,
+      "HSECS_SEARCH_RECORD_THRESHOLD": 2,
+      "WSECS_SEARCH_RECORD_THRESHOLD": 2
+    }
+  ]
+}

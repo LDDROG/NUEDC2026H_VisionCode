@@ -1,0 +1,5 @@
+id: ironball_2026h
+name: 钢球平衡检测
+version: 1.0.0
+author: LDD_ROG
+description: YOLO钢球位置检测 + Modbus RTU通信 + RTSP图传

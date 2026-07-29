@@ -1,0 +1,15 @@
+# generated time: 2026-07-29 17:01:53.636432
+# sample number: 100
+# chip: bm1684x
+# total layers: 0 (unique list blow)
+# number of shape layers: 0
+# number of pattern layers: 0
+# number of custom layers: 0
+# # part_quant_mode: None
+###
+# ['top.MaxPool', 'top.MaxPool', 'top.MaxPool', 'top.Concat'] (Name: yolo_block) is a subset of the main list. Count: 1
+###
+# op_name   quantize_mode
+# pattern layers
+# shape layers
+# custom layers
