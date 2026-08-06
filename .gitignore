@@ -8,3 +8,4 @@ MSPM0_with_BSP/    # M0框架
 2025E/
 2026Simulate/
 yolo_training/dataset_yolo/      # 铁球数据集yolo版
+2026H/pad_recording_package/*.exe    # FFmpeg/FFplay 超100M GitHub限制
