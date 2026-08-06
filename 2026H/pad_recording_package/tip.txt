@@ -1,0 +1,1 @@
+请在该文件夹内自行放置ffmpeg.exe和ffplay.exe
