@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>ball_00010_190_2580.jpg</filename>
+  <size>
+    <width>416</width>
+    <height>234</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>158</xmin>
+      <ymin>111</ymin>
+      <xmax>196</xmax>
+      <ymax>154</ymax>
+    </bndbox>
+  </object>
+</annotation>

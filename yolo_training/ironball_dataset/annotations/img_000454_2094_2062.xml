@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>img_000454_2094_2062.jpg</filename>
+  <size>
+    <width>416</width>
+    <height>249</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>311</xmin>
+      <ymin>154</ymin>
+      <xmax>341</xmax>
+      <ymax>187</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>88</xmin>
+      <ymin>117</ymin>
+      <xmax>117</xmax>
+      <ymax>146</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>178</xmin>
+      <ymin>127</ymin>
+      <xmax>205</xmax>
+      <ymax>159</ymax>
+    </bndbox>
+  </object>
+</annotation>

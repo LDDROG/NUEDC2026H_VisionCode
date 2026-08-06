@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>newest_00024_1028.jpg</filename>
+  <size>
+    <width>320</width>
+    <height>224</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>209</xmin>
+      <ymin>91</ymin>
+      <xmax>220</xmax>
+      <ymax>100</ymax>
+    </bndbox>
+  </object>
+</annotation>

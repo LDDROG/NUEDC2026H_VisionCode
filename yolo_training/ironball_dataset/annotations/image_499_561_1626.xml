@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>image_499_561_1626.jpg</filename>
+  <size>
+    <width>312</width>
+    <height>416</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>170</xmin>
+      <ymin>219</ymin>
+      <xmax>195</xmax>
+      <ymax>261</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>0</xmin>
+      <ymin>80</ymin>
+      <xmax>18</xmax>
+      <ymax>135</ymax>
+    </bndbox>
+  </object>
+</annotation>

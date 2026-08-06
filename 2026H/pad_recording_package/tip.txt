@@ -1,1 +1,1 @@
-如果环境变量中没有，请在该文件夹内自行放置ffmpeg.exe和ffplay.exe
+如果环境变量中没有，请在该文件夹内自行放置ffmpeg.exe和ffplay.exe。

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>image_71_960_1821.jpg</filename>
+  <size>
+    <width>120</width>
+    <height>105</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>20</xmax>
+      <ymax>21</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>48</xmin>
+      <ymin>0</ymin>
+      <xmax>87</xmax>
+      <ymax>32</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>0</xmin>
+      <ymin>30</ymin>
+      <xmax>40</xmax>
+      <ymax>70</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -28,3 +28,8 @@ venv/
 # 系统文件
 .DS_Store
 Thumbs.db
+
+# 4844模型的最终发布版本
+!final_models/yolo26s_ironball4844.pt
+!final_models/yolo26s_ironball4844_320x64.cvimodel
+!final_models/yolo26s_ironball4844_320x64.mud
