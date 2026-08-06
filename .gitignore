@@ -1,12 +1,12 @@
 .claude/
-RaspberryPi_Control/    # 树莓派连接隐私
-yolo_training/ironball_dataset/    # 铁球数据集
-MSPM0_with_BSP/    # M0框架
+RaspberryPi_Control/
+yolo_training/ironball_dataset/
+MSPM0_with_BSP/
 .vscode/
 2021F/
 2023E/
 2025E/
 2026Simulate/
-yolo_training/dataset_yolo/      # 铁球数据集yolo版
-2026H/pad_recording_package/*.exe    # FFmpeg/FFplay 超100M GitHub限制
-TJC_T1Screen/taskmgr/    # 队友MSPM0代码(含维特陀螺仪等)
+yolo_training/dataset_yolo/
+2026H/pad_recording_package/*.exe
+TJC_T1Screen/taskmgr/
