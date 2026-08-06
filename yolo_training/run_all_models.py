@@ -1,7 +1,5 @@
-"""串行训练 4 个 YOLO 模型，避免爆显存。睡前跑一行，起床拿结果。
-
-用法: python run_all_models.py
-"""
+# LDD_ROG 2026.7.29
+# 连续训练
 
 import shutil
 import traceback

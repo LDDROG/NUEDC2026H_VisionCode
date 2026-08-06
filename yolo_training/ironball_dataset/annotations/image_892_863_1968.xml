@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>image_892_863_1968.jpg</filename>
+  <size>
+    <width>311</width>
+    <height>416</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>180</xmin>
+      <ymin>189</ymin>
+      <xmax>228</xmax>
+      <ymax>256</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,4 +1,10 @@
 .claude/
-
-# 树莓派连接隐私
-RaspberryPi_Control/
+RaspberryPi_Control/    # 树莓派连接隐私
+yolo_training/ironball_dataset/    # 铁球数据集
+MSPM0_with_BSP/    # M0框架
+.vscode/
+2021F/
+2023E/
+2025E/
+2026Simulate/
+yolo_training/dataset_yolo/      # 铁球数据集yolo版

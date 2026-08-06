@@ -1,36 +1,16 @@
-"""
-YOLOv11n 训练脚本 — 针对 MaixCam 平台优化。
-
-MaixCam 推荐输入尺寸:
-  224x224  — 速度最快, 推理约 8-15ms, 适合简单/中距离目标
-  320x320  — 速度和精度平衡
-  448x448  — 精度更高, 但推理较慢
-
-用法:
-  python train.py --data ./dataset_yolo/dataset.yaml --weights ./weights/yolo11n.pt
-  python train.py --data ./dataset_yolo/dataset.yaml -s 224 -e 100 -b 32 --balance
-"""
+# LDD_ROG 2026.7.29
+# YOLO训练脚本
 
 import argparse
 import json
 import random
 from pathlib import Path
 
-import numpy as np
 import yaml
 from ultralytics import YOLO
 
 
-# ============================================================
-# 数据均衡: 对少数类样本进行过采样
-# ============================================================
-
 def balance_dataset(label_dir, img_dir, class_names, threshold=1.5):
-    """分析各类别样本分布, 返回过采样后的 (image_path, label_path) 列表。
-
-    当 多数类样本数 / 少数类样本数 > threshold 时,
-    对包含少数类的图片进行重复采样, 使各类别趋于均衡。
-    """
     label_dir = Path(label_dir)
     img_dir = Path(img_dir)
 
@@ -89,7 +69,6 @@ def balance_dataset(label_dir, img_dir, class_names, threshold=1.5):
 
 
 def create_balanced_yaml(original_yaml_path, balanced_pairs, output_path):
-    """根据过采样后的图片列表, 创建临时目录和 dataset.yaml"""
     import shutil
     output_path = Path(output_path)
     (output_path / "images").mkdir(parents=True, exist_ok=True)
@@ -117,14 +96,10 @@ def create_balanced_yaml(original_yaml_path, balanced_pairs, output_path):
     return yaml_path
 
 
-# ============================================================
-# 主训练入口
-# ============================================================
 
 def main():
     parser = argparse.ArgumentParser(description="YOLOv11n 训练 for MaixCam")
 
-    # ---- 基础参数 (与 MaixHub 训练页面对齐) ----
     parser.add_argument("--data", "-d", required=True, help="dataset.yaml 路径")
     parser.add_argument("--weights", "-w", default="yolo11n.pt", help="预训练权重路径 (默认: yolo11n.pt)")
     parser.add_argument("--imgsz", "-s", type=int, default=224, help="输入分辨率 (默认: 224)")
@@ -135,19 +110,15 @@ def main():
     parser.add_argument("--device", default="cuda", help="训练设备: cuda, cpu, mps")
     parser.add_argument("--workers", type=int, default=4, help="数据加载线程数")
 
-    # ---- 优化器 & 学习率 ----
+    # 优化器、学习率
     parser.add_argument("--optimizer", default="AdamW", help="优化器: AdamW, SGD, Adam")
     parser.add_argument("--weight-decay", type=float, default=0.0005, help="权重衰减")
     parser.add_argument("--warmup-epochs", type=int, default=3, help="热身轮数")
     parser.add_argument("--cos-lr", action="store_true", default=True, help="余弦学习率衰减 (默认开启)")
 
-    # ---- 早停 & 恢复 ----
+    # 早停、恢复
     parser.add_argument("--patience", type=int, default=50, help="早停耐心值: 连续N轮无提升则停止 (默认: 50)")
     parser.add_argument("--resume", action="store_true", help="从上次中断处恢复训练")
-
-    # ================================================================
-    # ---- 数据增强 (对应 MaixHub 训练选项) ----
-    # ================================================================
 
     aug = parser.add_argument_group("数据增强 (对应 MaixHub 训练页选项)")
     aug.add_argument("--fliplr", type=float, default=0.0,
@@ -182,7 +153,7 @@ def main():
     aug.add_argument("--copy-paste", type=float, default=0.0,
                      help="Copy-Paste 增强概率 (默认: 0, 小目标检测可开启)")
 
-    # ---- 数据均衡 (对应 MaixHub "数据均衡" 选项) ----
+    # 数据均衡
     bal = parser.add_argument_group("数据均衡 (对应 MaixHub '启动数据均衡' 选项)")
     bal.add_argument("--balance", action="store_true",
                      help="启用数据均衡: 对少数类样本过采样, 防止模型偏向多数类")
@@ -191,14 +162,14 @@ def main():
 
     args = parser.parse_args()
 
-    # ---- 检查数据集 ----
+    # 检查数据集
     data_path = Path(args.data)
     if not data_path.exists():
         print(f"错误: 数据集配置 {args.data} 不存在!")
         print("请先运行 prepare_dataset.py 转换数据集格式")
         return
 
-    # ---- 读取类别信息 ----
+    # 读取类别信息
     with open(data_path, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
     names = cfg.get("names", {})
@@ -207,7 +178,7 @@ def main():
     else:
         class_names = list(names) if names else []
 
-    # ---- 数据均衡 ----
+    # 数据均衡
     actual_data = str(data_path.resolve())
     if args.balance:
         print("正在分析数据分布...")
@@ -226,7 +197,7 @@ def main():
         else:
             print("单类别或分布已均衡, 跳过数据均衡")
 
-    # ---- 加载模型 ----
+    # 加载模型
     if Path(args.weights).exists():
         print(f"从本地加载权重: {args.weights}")
         model = YOLO(args.weights)
@@ -248,7 +219,9 @@ def main():
     print(f"  MixUp: {args.mixup}")
     print()
 
-    # ---- 训练 ----
+
+
+    # 训练
     results = model.train(
         data=actual_data,
         epochs=args.epochs,
@@ -281,7 +254,7 @@ def main():
         copy_paste=args.copy_paste,
     )
 
-    # ---- 保存 MaixCam 配置 ----
+    # 保存MaixCam配置
     best_pt = Path(results.save_dir) / "weights" / "best.pt"
     meta = {
         "imgsz": args.imgsz,

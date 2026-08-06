@@ -1,19 +1,5 @@
-"""
-将 MaixHub 下载的数据集转换为 YOLO 训练格式。
-
-MaixHub 数据集常见格式:
-  1. 图片 + VOC XML 标注
-  2. 图片 + COCO JSON 标注
-  3. 图片 + MaixHub JSON 标注 (每个图片一个json)
-
-用法:
-  # 基础转换
-  python prepare_dataset.py -i ./dataset_raw -o ./dataset_yolo -l ball circle
-
-  # 启用最小框过滤 + 负样本保留 + 训练/验证集划分
-  python prepare_dataset.py -i ./dataset_raw -o ./dataset_yolo -l ball \\
-      --min-bbox 10 --keep-negatives --split 0.8
-"""
+# LDD_ROG 2026.7.29
+# Maixhub数据集转换YOLO格式
 
 import argparse
 import json
@@ -22,14 +8,7 @@ import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-
 def filter_small_boxes(lines, min_pixels, img_w, img_h):
-    """过滤像素大小低于 min_pixels 的标注框。
-
-    lines: YOLO 格式的标注行 ["cls cx cy w h", ...]
-    img_w, img_h: 图片宽高
-    min_pixels: 最小像素阈值 (框的最短边)
-    """
     if min_pixels <= 0:
         return lines
 
@@ -44,13 +23,11 @@ def filter_small_boxes(lines, min_pixels, img_w, img_h):
         if min(pw, ph) >= min_pixels:
             filtered.append(line)
         else:
-            print(f"  过滤小框: {pw:.0f}x{ph:.0f}px < {min_pixels}px")
+            print(f"过滤小框: {pw:.0f}x{ph:.0f}px < {min_pixels}px")
 
     return filtered
 
-
 def voc_xml_to_yolo(xml_path, img_w, img_h, class_map, min_bbox=0):
-    """将 VOC XML 标注转为 YOLO 格式: class_id cx cy w h (归一化)"""
     tree = ET.parse(xml_path)
     root = tree.getroot()
     labels = []
@@ -71,9 +48,7 @@ def voc_xml_to_yolo(xml_path, img_w, img_h, class_map, min_bbox=0):
 
     return filter_small_boxes(labels, min_bbox, img_w, img_h)
 
-
 def coco_json_to_yolo(coco_path, img_dir, out_dir, class_map, min_bbox=0, keep_negatives=True):
-    """将 COCO JSON 标注转为 YOLO 格式"""
     with open(coco_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -117,9 +92,7 @@ def coco_json_to_yolo(coco_path, img_dir, out_dir, class_map, min_bbox=0, keep_n
 
     return count
 
-
 def maixhub_json_to_yolo(json_dir, img_dir, out_dir, class_map, min_bbox=0, keep_negatives=True):
-    """将 MaixHub JSON 标注转为 YOLO 格式。"""
     (out_dir / "labels").mkdir(parents=True, exist_ok=True)
     (out_dir / "images").mkdir(parents=True, exist_ok=True)
 
@@ -139,7 +112,6 @@ def maixhub_json_to_yolo(json_dir, img_dir, out_dir, class_map, min_bbox=0, keep
                                            min_bbox, keep_negatives)
 
     return count
-
 
 def _process_maixhub_item(item, img_dir, out_dir, class_map, min_bbox=0, keep_negatives=True):
     name = item.get("name") or item.get("file_name") or item.get("image")
@@ -193,15 +165,7 @@ def _process_maixhub_item(item, img_dir, out_dir, class_map, min_bbox=0, keep_ne
 
     return 0
 
-
 def split_train_val(output_dir, train_ratio=0.8, seed=42):
-    """将 images/ 和 labels/ 拆分为 train/ 和 val/ 子目录。
-
-    输出结构:
-      output_dir/
-        train/images/  train/labels/
-        val/images/    val/labels/
-    """
     output_dir = Path(output_dir)
     img_dir = output_dir / "images"
     label_dir = output_dir / "labels"
@@ -237,7 +201,6 @@ def split_train_val(output_dir, train_ratio=0.8, seed=42):
 
 def auto_detect_and_convert(input_dir, output_dir, class_map=None,
                             min_bbox=0, keep_negatives=True, split=None):
-    """自动检测数据集格式并转换"""
     input_dir = Path(input_dir)
     output_dir = Path(output_dir)
 
@@ -330,11 +293,11 @@ def auto_detect_and_convert(input_dir, output_dir, class_map=None,
         print("未检测到有效数据, 请确认数据集路径正确")
         return
 
-    # ---- 划分训练/验证集 ----
+    # 划分训练/验证集
     if split and 0 < split < 1:
         split_train_val(output_dir, split)
 
-    # ---- 生成 dataset.yaml ----
+    # 生成dataset.yaml
     idx_to_class = {v: k for k, v in class_map.items()}
     data_yaml = {
         "path": str(output_dir.resolve()),
@@ -370,14 +333,14 @@ def main():
     parser.add_argument("--output", "-o", default="./dataset_yolo", help="输出目录")
     parser.add_argument("--labels", "-l", nargs="+", help="类别名称列表, 如: -l ball circle")
 
-    # ---- 过滤 & 负样本 (对应 MaixHub 选项) ----
+    # 过滤及负样本设置
     filt = parser.add_argument_group("标注过滤 (对应 MaixHub '标注框限制' 和 '允许负样本')")
     filt.add_argument("--min-bbox", type=int, default=0,
                       help="最小标注框像素大小, 过滤更小的框 (默认: 0=不过滤, MaixHub 默认 10)")
     filt.add_argument("--keep-negatives", action="store_true", default=False,
                       help="保留无标注的图片作为负样本 (默认: 否)")
 
-    # ---- 数据集划分 ----
+    # 数据集划分
     split = parser.add_argument_group("数据集划分")
     split.add_argument("--split", type=float, default=None,
                        help="训练集比例, 如 0.8 表示 80%% 训练 20%% 验证")

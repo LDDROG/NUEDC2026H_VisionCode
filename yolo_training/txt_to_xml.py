@@ -1,4 +1,6 @@
-"""将 labels 3 和 labels 4 中的 YOLO txt 转为 VOC XML，写入各自 xml/ 目录。"""
+# LDD_ROG 2026.7.29
+# 标签格式转换
+
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from pathlib import Path

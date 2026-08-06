@@ -1,14 +1,12 @@
 from maix import app, rtsp, camera, image, display, touchscreen, time
 
-# init display
 disp = display.Display()
 ts = touchscreen.TouchScreen()
 
-# init camera
 cam = camera.Camera(320, 240, image.Format.FMT_YVU420SP)
 cam2 = cam.add_channel(disp.width(), disp.height())
 
-# init rtsp server（不推音频，比赛不需要）
+# 不推音频降低延迟
 server = rtsp.Rtsp()
 server.bind_camera(cam)
 server.start()
@@ -63,5 +61,4 @@ while not app.need_exit():
     if need_exit:
         break
 
-# Must release rtsp server
 del server

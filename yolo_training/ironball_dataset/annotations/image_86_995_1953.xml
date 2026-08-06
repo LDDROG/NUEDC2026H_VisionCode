@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>image_86_995_1953.jpg</filename>
+  <size>
+    <width>112</width>
+    <height>112</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>82</xmin>
+      <ymin>44</ymin>
+      <xmax>111</xmax>
+      <ymax>74</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>109</xmin>
+      <ymin>0</ymin>
+      <xmax>111</xmax>
+      <ymax>1</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>91</xmin>
+      <ymin>19</ymin>
+      <xmax>111</xmax>
+      <ymax>43</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,19 +1,5 @@
-"""
-将训练好的 YOLOv11n 导出为 NCNN 格式, 一键部署到树莓派。
-
-NCNN 是腾讯开源的 ARM CPU 推理框架, 在树莓派上跑 YOLO 比 ONNX Runtime 快 2-5 倍。
-
-用法:
-  python export_to_ncnn.py --weights best.pt --imgsz 224
-
-输出:
-  output/
-    best_ncnn_model/     ← NCNN 模型文件夹, 整个复制到树莓派
-      model.bin           — 权重
-      model.param          — 网络结构
-      metadata.yaml        — 标签名/输入尺寸等
-    run_ncnn.py           ← 树莓派上一键运行的推理脚本
-"""
+# LDD_ROG 2026.7.29
+# 给树莓派备用的
 
 import argparse
 import shutil

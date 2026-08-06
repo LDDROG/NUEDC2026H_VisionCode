@@ -1,3 +1,4 @@
+# LDD_ROG 2026.7.29
 # YOLOv11n 训练 + MaixCam 模型转换 依赖
 
 # 核心训练框架

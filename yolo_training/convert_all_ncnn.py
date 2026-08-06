@@ -1,7 +1,5 @@
-"""一键导出 4 个模型为 NCNN 格式（树莓派用）
-
-用法: python convert_all_ncnn.py
-"""
+# LDD_ROG 2026.7.29
+# 给树莓派备用的
 
 import shutil
 from pathlib import Path

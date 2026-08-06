@@ -1,8 +1,5 @@
-"""
-验证 YOLO 格式数据集的完整性。
-
-用法: python validate_dataset.py --data ./dataset_yolo/dataset.yaml
-"""
+# LDD_ROG 2026.7.29
+# 验证数据集完整性
 
 import argparse
 from pathlib import Path

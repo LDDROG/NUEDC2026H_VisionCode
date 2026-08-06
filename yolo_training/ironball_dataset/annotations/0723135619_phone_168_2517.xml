@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>0723135619_phone_168_2517.jpg</filename>
+  <size>
+    <width>320</width>
+    <height>320</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>130</xmin>
+      <ymin>156</ymin>
+      <xmax>157</xmax>
+      <ymax>180</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <filename>微信图片_20260723175033_3.jpg</filename>
+  <size>
+    <width>416</width>
+    <height>311</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>ironball</name>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>259</xmin>
+      <ymin>174</ymin>
+      <xmax>280</xmax>
+      <ymax>196</ymax>
+    </bndbox>
+  </object>
+</annotation>

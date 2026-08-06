@@ -1,8 +1,7 @@
-"""一键转换 4 个模型 → cvimodel + MUD（使用 Docker tpu-mlir）
-
-用法: python convert_all_docker.py
-前置: Docker Desktop 已安装并运行
-"""
+# LDD_ROG 2026.7.29
+# 可以一键转换4个yolo模型对应的cvimodel，但效果最好的还是yolo26s或11s
+# 用法: python convert_all_docker.py
+# 要求Docker Desktop正在运行
 
 import json
 import shutil
@@ -15,7 +14,6 @@ FINAL = BASE / "final_models"
 CALIB_IMG = BASE / "dataset_yolo/val/images"
 DOCKER_IMG = "sophgo/tpuc_dev:latest"
 
-# 四个模型配置
 MODELS = [
     {
         "name": "yolo11n_ironball",
@@ -64,7 +62,7 @@ LABELS = ["ironball"]
 
 
 def make_mud(cvimodel_path, model_type, output_dir):
-    """创建 INI 格式 MUD 文件"""
+    # 创建INI格式MUD文件
     mud_path = output_dir / cvimodel_path.with_suffix(".mud").name
     content = f"""[basic]
 type = cvimodel
@@ -82,7 +80,6 @@ labels = {",".join(LABELS)}
 
 
 def docker_cmd(args_list):
-    """在 Docker 容器中运行命令"""
     cmd = [
         "docker", "run", "--rm",
         "-v", f"{BASE.resolve().as_posix()}:/workspace",
@@ -94,7 +91,7 @@ def docker_cmd(args_list):
 
 
 def main():
-    # 校准集复制到 final_models
+    # 校准集复制到final_models
     calib_dest = FINAL / "calib_images"
     if not calib_dest.exists():
         calib_dest.mkdir(parents=True)
@@ -164,7 +161,7 @@ def main():
             print(f"  ❌ 失败")
             continue
 
-        # 4. 创建 MUD
+        # 4. 创建MUD
         cvimodel = FINAL / f"{mlir_base}.cvimodel"
         if cvimodel.exists():
             mud = make_mud(cvimodel, model["model_type"], FINAL)
