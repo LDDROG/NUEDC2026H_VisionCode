@@ -1,8 +1,10 @@
-2026 全国大学生电子设计大赛H题
+2026 全国大学生电子设计大赛H题<br>
 视觉部分代码
-
+<br>
 本视觉系统使用一台 MaixCAM 和一台 MaixCAM Pro ，分别负责无线图传和钢球识别。<br>
+<br>
 · 无线图传部分<br>
   使用 RTSP 推流，并在 Windows 上使用 FFplay 直播，同时利用 FFmpeg 录制。<br>
+  <br>
 · 钢球识别部分<br>
   使用了一个由 4844 张实拍图片训练而成的自制 YOLO 模型，预训练权重为 YOLO26s ，迭代次数 100 。最终 mAP 为 95.5% ，帧率在 MaixCAM Pro 上为 50FPS 左右。<br>
