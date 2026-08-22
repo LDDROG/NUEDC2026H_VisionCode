@@ -1,0 +1,10 @@
+id: f2021
+name: 2021F数字识别
+version: 1.0.0
+author: LDD_ROG
+icon: app.png
+desc: 无
+files:
+  - app.png
+  - app.yaml
+  - main.py
